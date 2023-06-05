@@ -1,7 +1,7 @@
 # Set the repository information
 $branchName = "main"
 $commitMessage = "Update new files"
-$filePath = "./"
+$filePath = "C:\WebApp"
 
 # Set the authentication token (optional if the repository is public)
 $authToken = ""
