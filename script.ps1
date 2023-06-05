@@ -1,24 +1,26 @@
+# Set the repository information
+$branchName = "main"
+$commitMessage = "Update new files"
+$filePath = "C:\WebApp"
 
+# Set the authentication token (optional if the repository is public)
+$authToken = ""
 
-git config --global user.name "edwinkullu"
+# Set the Git remote URL
+$remoteUrl = "https://github.com/edwinkullu/WebApp.git"
+
+# Configure Git user
+git config --global user.name "edwin kullu"
 git config --global user.email "edwinkullu94@gmail.com"
 
-$repoPath = "C:\WebApp"
-$commitMessage = ".Net web application "
-$branchName = "main"  # Replace with your desired branch name
+# Stage the changes
+git add $filePath
 
-
-
-
-# Change directory to the repository path
-Set-Location -Path $repoPath
-
-# Stage all changes
-git add .
-
-# Commit the changes with the specified commit message
+# Commit the changes
 git commit -m $commitMessage
 
 # Push the changes to the remote repository
-
-git push origin $branchName
+if ($authToken) {
+    $remoteUrl = $remoteUrl -replace "^https://", "https://$($authToken)@"
+}
+git push $remoteUrl $branchName
