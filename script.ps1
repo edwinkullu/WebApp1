@@ -20,5 +20,5 @@ git add .
 git commit -m $commitMessage
 
 # Push the changes to the remote repository
-git remote add origin https://github.com/edwinkullu/WebApp.git
+
 git push origin $branchName
