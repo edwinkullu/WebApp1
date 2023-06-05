@@ -10,6 +10,6 @@ git add .
 
 git commit -m "update new file"
 
-git remote add origin https://github.com/edwinkullu/WebApp.git
+
 
 git push  origin main
